@@ -27,9 +27,6 @@ last_user_id = len(new_names) - 1
 id = len(new_names)
 count = 0
 faceCount = 0
-# account_sid = "AC29819c8e2adf6a9b6d967fc7d305e6eb"
-# auth_token  = "7d600cedd0cffa793aab7415b486540a"
-# client = Client(account_sid, auth_token)
 
 # def user_data(request):
 # 	user_name = request.user.username 
@@ -130,12 +127,6 @@ class VideoCamera(object):
 				if (faceCount % 1 == 0 and faceCount > 1):
 					face = FaceDetectedTime(detected_face=id)
 					face.save()
-
-				# if (faceCount == 2):
-				# 	message = client.messages.create(
-				# 		to= '+880'+str(self.sms_mobile_number), 
-				# 		from_="+12183044956",
-				# 		body= str(id) + ' is detected, ' + str(self.sms_body) + ' - sent from Smart Security.' )
 
 				# if (faceCount % 3 == 0 and faceCount > 1):
 				# 	email = EmailMessage(
