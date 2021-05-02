@@ -6,3 +6,5 @@
 - Forms validation
 - UI Kit: **Smart Dashboard**
 
+Some requirements are missing, so install those package during run django server. And i used conda to install the packages, normal cmd occured same error to install dlib and some packages
+
