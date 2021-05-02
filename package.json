@@ -1,0 +1,29 @@
+{
+  "name": "https://github.com/app-generator/django-boilerplate",
+  "version": "1.0.0",
+  "description": "Smart Security System",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": "8.11.3"
+  },
+  "devDependencies": {
+    "eslint": "5.0.0",
+    "eslint-config-google": "0.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/app-generator/django-boilerplate"
+  },
+  "keywords": [
+    "django",
+    "web-app",
+    "open-source"
+  ],
+  "author": "Imran & Meraj",
+  "contributors": [
+    "Imran & Meraj Support"
+  ],
+  "license": "MIT"
+}

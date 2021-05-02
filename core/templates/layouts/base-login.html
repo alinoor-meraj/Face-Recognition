@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Security</title>
+    <link href="{% static 'assets/img/brand/favicon.png' %}" rel="icon" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="/static/assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+    <link href="/static/assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="/static/assets/js/plugins/bootsnav_files/skins/color.css" rel="stylesheet">
+    <link href="/static/assets/js/plugins/bootsnav_files/css/animate.css" rel="stylesheet">
+    <link href="/static/assets/js/plugins/bootsnav_files/css/bootsnav.css" rel="stylesheet">
+    <link href="/static/assets/js/plugins/bootsnav_files/css/overwrite.css" rel="stylesheet">
+<!--     <link href="/static/assets/js/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="/static/assets/js/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="/static/assets/js/plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="/static/assets/js/plugins/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet"> -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"> -->
+    <link href="/static/assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/static/assets/bootstrap-3.3.7/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/assets/css/main.css" rel="stylesheet">
+    <link href="/static/assets/css/style.css?v=1.1.0" rel="stylesheet" />
+</head>
+<body class="">
+  <div class="main-content">
+
+    {% include "includes/navigation-login.html" %}
+
+    
+    {% block content %}{% endblock content %}
+
+    {% include "includes/footer-login-register.html" %}
+
+  </div>
+    
+  {% include "includes/scripts-login-register.html" %}
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header bg-gradient-primary-->
+    <div class="header pb-7 pt-5 pt-md-6" style="min-height: 400px; background-image: url(/static/assets/img/theme/live-secure.jpg); background-size: cover; background-position: center top;">
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-10 col-sm-10">
+              <div class="card shadow">
+                <div class="card-header border-0">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3 class="mb-0">Face Detected Time</h3>
+                    </div>
+                    <h4 class="current">
+                      {% if detected_face_list.has_previous %}
+                        <a style="vertical-align: text-bottom;" href="?page={{ detected_face_list.previous_page_number }}">&laquo;</a>
+                      {% endif %}
+                      Page {{ detected_face_list.number }} of {{ detected_face_list.paginator.num_pages }}
+                      {% if detected_face_list.has_next %}
+                        <a style="vertical-align: text-bottom;" href="?page={{ detected_face_list.next_page_number }}">&raquo;</a>
+                      {% endif %}
+                    </h4>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <!-- Projects table -->
+                  <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Detected Face</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% if detected_face_list %}
+                        {% for detected_face in detected_face_list %}
+                        <tr>
+                          <th scope="row">
+                            {{forloop.counter}}
+                          </th>
+                          <th scope="row">
+                            {{detected_face.detected_date}}
+                          </th>
+                          <td>
+                            {{detected_face.detected_time}}
+                          </td>
+                          <td>
+                            {{detected_face.detected_face}}
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      {% endif %}
+                    </tbody>
+                  </table>
+                </div>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center">
+                    {% if detected_face_list.has_previous %}
+                      <li class="page-item">
+                        <a class="page-link" href="?page=1">&laquo; First</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="?page={{ detected_face_list.previous_page_number }}">previous</a>
+                      </li>
+                    {% endif %}
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#">Current Page No.{{ detected_face_list.number }}</a>
+                      </li>
+                    {% if detected_face_list.has_next %}
+                      <li class="page-item">
+                        <a class="page-link" href="?page={{ detected_face_list.next_page_number }}">Next</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="?page={{ detected_face_list.paginator.num_pages }}">Last &raquo;</a>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="container-fluid mt--7">
+
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}
+

@@ -1,0 +1,47 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header bg-gradient-primary-->
+    <div class="header pb-7 pt-5 pt-md-6" style="min-height: 400px; background-image: url(/static/assets/img/theme/live-secure.jpg); background-size: cover; background-position: center top;">
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-10">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <h1 class="card-title text-uppercase text-dark mb-0">Live Cam:</h1>
+                    <img style="width:100%;min-height: 400px;" src="{% url 'video_feed' %}">
+                    <a href="/" class="btn btn-danger" style="position: absolute;top: 0;right: 0;">
+                      <i class="fas fa-times-circle"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="container-fluid mt--7">
+
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}
+

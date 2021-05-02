@@ -1,0 +1,112 @@
+{% extends 'layouts/base-register.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Login {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <!-- Page content -->
+    <section id="home">
+        <div class="container">
+            <div class="row">
+                <div id="particles-js"></div>
+                <!-- Introduction -->
+                <div class="col-md-6 caption">
+                    <h1>Welcome To Smart Security</h1>
+                    <h2>
+                           More 
+                            <span class="animated-text"></span>
+                            <span class="typed-cursor"></span>
+                        </h2>
+                    <p>All in One solution to your security concerns. User-friendly UI with high efficiency, usable your comfort.</p>
+                    <a href="{% url 'register' %}" class="btn btn-transparent">Get Started</a>
+                </div>
+                <!-- Sign Up -->
+                <div class="col-md-5 col-md-offset-1 signup-form">
+                  <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h2 class="text-center">SignUp Now</h2>
+                    <div class="text-center text-muted mb-4">
+                      <p>{{ msg }}</p>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                      <div class="input-group input-group-alternative mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                        </div>
+                        {{ form.username }}
+                      </div>
+                    </div>
+                    <span class="text-error">{{ form.username.errors }}</span>
+
+                    <div class="form-group">
+                      <div class="input-group input-group-alternative mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                        </div>
+                        {{ form.email }}
+                      </div>
+                    </div>
+                    <span class="text-error">{{ form.email.errors }}</span>
+
+                    <div class="form-group">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                        </div>
+                        {{ form.password1 }}
+                      </div>
+                    </div>
+                    <span class="text-error">{{ form.password1.errors }}</span>
+
+                    <div class="form-group">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                        </div>
+                        {{ form.password2 }}
+                      </div>
+                    </div>
+                    <span class="text-error">{{ form.password2.errors }}</span>
+
+                    <div class="form-group">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-image"></i></span>
+                        </div>
+                        <div class="file-upload-wrapper" data-text="Select your payment slip...">
+                          {{ form.paymentslip }}
+                        </div>
+                      </div>
+                    </div>
+                    <span class="text-error">{{ form.paymentslip.errors }}payment</span>
+
+                    <div class="col-12">
+                      <div class="form-group custom-control custom-control-alternative custom-checkbox">
+                        <input class="custom-control-input" id="customCheckRegister" type="checkbox">
+                        <label class="custom-control-label" for="customCheckRegister">
+                          <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-blue btn-block">Create account</button>
+                    </div>
+                  </form>
+                  <div class="col-12 text-center text-dark">
+                    If you have an account, <a href="{% url 'login' %}"><small>Login</small></a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "accounts/login-register.html" %}
+
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}

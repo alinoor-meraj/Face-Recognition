@@ -1,0 +1,84 @@
+<!--//** Navigation**//-->
+{% load crispy_forms_tags %}
+    <nav class="navbar navbar-default navbar-fixed white no-background bootsnav navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#home">
+                    <img src="/static/assets/img/brand/Smart Security.png" class="logo" alt="logo">
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active scroll"><a href="#home">Home</a></li>
+                    <li class="scroll"><a href="#about">About</a></li>
+                    <li class="scroll"><a href="#services">Services</a></li>
+                    <li class="scroll"><a href="#price">Price</a></li>
+                    <li class="scroll"><a href="#contact">Contact</a></li>
+                    <li class="button-holder">
+                        <a href="{% url 'login' %}" class="btn btn-blue navbar-btn">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+
+    
+    <!-- Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Add New User Name</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST">
+              <fieldset class="form-group">
+                {% csrf_token %} {{ Person_add_form|crispy }}
+              </fieldset>
+              <div class="text-right">
+                <button type="submit" class="btn btn-primary">Add</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="SignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center" id="myModalLabel">Sign In</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="signup-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="User Name" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Password" required="required">
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-blue btn-block">Log In</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-center">
+                    <a href="#">Signup</a>
+                </div>
+            </div>
+        </div>
+    </div>

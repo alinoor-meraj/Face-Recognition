@@ -1,0 +1,68 @@
+
+/*!
+
+* Smart Dashboard 
+
+*/
+
+// Core
+
+@import "smart-dashboard/custom/functions";
+@import "smart-dashboard/custom/variables";
+@import "smart-dashboard/custom/mixins";
+
+// bootstrap (4.3.1) components
+
+@import "smart-dashboard/bootstrap/root";
+@import "smart-dashboard/bootstrap/reboot";
+@import "smart-dashboard/bootstrap/type";
+@import "smart-dashboard/bootstrap/images";
+@import "smart-dashboard/bootstrap/code";
+@import "smart-dashboard/bootstrap/grid";
+@import "smart-dashboard/bootstrap/tables";
+@import "smart-dashboard/bootstrap/forms";
+@import "smart-dashboard/bootstrap/buttons";
+@import "smart-dashboard/bootstrap/transitions";
+@import "smart-dashboard/bootstrap/dropdown";
+@import "smart-dashboard/bootstrap/button-group";
+@import "smart-dashboard/bootstrap/input-group";
+@import "smart-dashboard/bootstrap/custom-forms";
+@import "smart-dashboard/bootstrap/nav";
+@import "smart-dashboard/bootstrap/navbar";
+@import "smart-dashboard/bootstrap/card";
+@import "smart-dashboard/bootstrap/breadcrumb";
+@import "smart-dashboard/bootstrap/pagination";
+@import "smart-dashboard/bootstrap/badge";
+@import "smart-dashboard/bootstrap/jumbotron";
+@import "smart-dashboard/bootstrap/alert";
+@import "smart-dashboard/bootstrap/progress";
+@import "smart-dashboard/bootstrap/media";
+@import "smart-dashboard/bootstrap/list-group";
+@import "smart-dashboard/bootstrap/close";
+@import "smart-dashboard/bootstrap/modal";
+@import "smart-dashboard/bootstrap/tooltip";
+@import "smart-dashboard/bootstrap/popover";
+@import "smart-dashboard/bootstrap/carousel";
+@import "smart-dashboard/bootstrap/utilities";
+@import "smart-dashboard/bootstrap/print";
+
+// smart utilities and components
+
+@import "smart-dashboard/custom/reboot";
+@import "smart-dashboard/custom/utilities";
+@import "smart-dashboard/custom/components";
+
+// Vendor (Plugins)
+
+@import "smart-dashboard/custom/vendors";
+
+// Docs components
+
+@import "smart-dashboard/docs/variables";
+@import "smart-dashboard/docs/nav";
+@import "smart-dashboard/docs/clipboard-js";
+@import "smart-dashboard/docs/component-examples";
+@import "smart-dashboard/docs/prism";
+@import "smart-dashboard/docs/content";
+@import "smart-dashboard/docs/sidebar";
+@import "smart-dashboard/docs/footer";
